@@ -2,7 +2,7 @@ name: boarding_flow
 description: A custom flutter package for creating amazing onBoarding pages.
 version: 0.0.1
 author: Destiny Ed<dikeachaeze@gmail.com>
-homepage: 
+homepage: https://github.com/Destiny-Ed/boarding_flow
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
