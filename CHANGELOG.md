@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Released : 9 Mar 2021.
 
-* TODO: Describe initial release.
+- Created a simple and customizable Flutter boarding Package written in dart
