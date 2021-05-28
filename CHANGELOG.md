@@ -5,3 +5,7 @@
 ## [0.0.2]
 
 - Added support for svg image and every other image type
+
+## [0.0.3]
+
+- Set image as background

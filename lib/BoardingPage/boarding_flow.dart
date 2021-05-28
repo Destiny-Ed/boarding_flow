@@ -3,13 +3,18 @@ library boarding_flow;
 import 'package:boarding_flow/BoardingPage/page.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomBordingPage extends StatefulWidget {
   final List<Pages> boardingPages;
+  final ImageProvider<Object> backgroundImage;
   final Function lastPageAction;
   final Color indicatorColor;
   final Color indicatorCurrentColor;
-  CustomBordingPage({this.boardingPages, this.lastPageAction, this.indicatorColor = Colors.black, this.indicatorCurrentColor = Colors.purple})
+  CustomBordingPage(
+      {this.boardingPages,
+      this.lastPageAction,
+      this.backgroundImage,
+      this.indicatorColor = Colors.black,
+      this.indicatorCurrentColor = Colors.purple})
       : assert(boardingPages != null);
   @override
   _CustomBordingPageState createState() => _CustomBordingPageState();
@@ -44,8 +49,12 @@ class _CustomBordingPageState extends State<CustomBordingPage> {
         ],
       ),
       body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: widget.backgroundImage,
+        )),
         child: Padding(
-          padding: const EdgeInsets.all(25.0),
+          padding: const EdgeInsets.symmetric(vertical : 25.0),
           child: Column(
             children: [
               //Bording image, title and description
