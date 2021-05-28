@@ -25,19 +25,28 @@ class _BoardingPageState extends State<BoardingPage> {
   List<Pages> pages = [
     Pages(
       title: "Learn",
-      imagePath: "assets/ref.png",
+      imagePath: Image.asset(
+        "assets/ref.png",
+        fit: BoxFit.fitHeight,
+      ),
       description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     ),
     Pages(
       title: "Research",
-      imagePath: "assets/ref.png",
+      imagePath: Image.asset(
+        "assets/ref.png",
+        fit: BoxFit.fitHeight,
+      ),
       description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     ),
     Pages(
       title: "Contribute",
-      imagePath: "assets/ref.png",
+      imagePath: Image.asset(
+        "assets/ref.png",
+        fit: BoxFit.fitHeight,
+      ),
       description:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     ),

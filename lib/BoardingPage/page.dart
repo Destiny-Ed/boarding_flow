@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Pages extends StatefulWidget {
   final String description;
   final String title;
-  final String imagePath;
+  final Widget imagePath;
   Pages({this.description, this.title, this.imagePath, Key key})
       : super(key: key);
   @override
@@ -17,8 +17,7 @@ class _PagesState extends State<Pages> {
       children: [
         //Image
         Expanded(
-          child:
-              Image(image: AssetImage(widget.imagePath), fit: BoxFit.fitHeight),
+          child: widget.imagePath,
         ),
         //Description
         ListTile(

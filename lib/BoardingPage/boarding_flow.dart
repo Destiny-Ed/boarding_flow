@@ -31,9 +31,12 @@ class _CustomBordingPageState extends State<CustomBordingPage> {
                   onTap: widget.lastPageAction,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.arrow_forward_ios,
-                      color: widget.indicatorCurrentColor,
+                    child: CircleAvatar(
+                      backgroundColor: widget.indicatorCurrentColor,
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 )
