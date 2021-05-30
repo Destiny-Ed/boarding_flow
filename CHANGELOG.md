@@ -9,3 +9,11 @@
 ## [0.0.3]
 
 - Set image as background
+
+## [0.0.4]
+
+- Fixed minor issue
+
+## [0.0.5]
+
+- Stable Version

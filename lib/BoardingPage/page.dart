@@ -17,16 +17,25 @@ class _PagesState extends State<Pages> {
       children: [
         //Image
         Expanded(
-          child: widget.imagePath,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: widget.imagePath,
+          ),
         ),
         //Description
+
+        const SizedBox(
+          height: 10,
+        ),
         ListTile(
           title: Text(
             widget.title,
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
           ),
           subtitle: Text(
             widget.description,
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18),
           ),
         ),

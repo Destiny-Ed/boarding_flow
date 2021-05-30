@@ -5,56 +5,48 @@ import 'package:flutter/material.dart';
 
 class CustomBordingPage extends StatefulWidget {
   final List<Pages> boardingPages;
-  final ImageProvider<Object> backgroundImage;
   final Function lastPageAction;
   final Color indicatorColor;
   final Color indicatorCurrentColor;
   CustomBordingPage(
       {this.boardingPages,
       this.lastPageAction,
-      this.backgroundImage,
       this.indicatorColor = Colors.black,
       this.indicatorCurrentColor = Colors.purple})
       : assert(boardingPages != null);
   @override
-  _CustomBordingPageState createState() => _CustomBordingPageState();
+  _CustomBordingPageState1 createState() => _CustomBordingPageState1();
 }
 
-class _CustomBordingPageState extends State<CustomBordingPage> {
+class _CustomBordingPageState1 extends State<CustomBordingPage> {
   final PageController _pageController = PageController();
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          currentIndex + 1 == widget.boardingPages.length
-              ? GestureDetector(
-                  onTap: widget.lastPageAction,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: CircleAvatar(
-                      backgroundColor: widget.indicatorCurrentColor,
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                )
-              : Text(""),
+          GestureDetector(
+            onTap: widget.lastPageAction,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Skip",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: widget.indicatorCurrentColor,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
       body: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-          image: widget.backgroundImage,
-        )),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical : 25.0),
+          padding: const EdgeInsets.symmetric(vertical: 25.0),
           child: Column(
             children: [
               //Bording image, title and description
@@ -86,8 +78,26 @@ class _CustomBordingPageState extends State<CustomBordingPage> {
               ),
 
               const SizedBox(
-                height: 30,
+                height: 100,
               ),
+
+              currentIndex + 1 == widget.boardingPages.length
+                  ? GestureDetector(
+                      onTap: widget.lastPageAction,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          radius: 25,
+                          backgroundColor: widget.indicatorCurrentColor,
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    )
+                  : Text(""),
+
               //Page Indicator
               Container(
                 margin: EdgeInsets.only(top: 20),
