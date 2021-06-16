@@ -8,7 +8,7 @@
             "name": "boarding_flow",
             "request": "launch",
             "type": "dart",
-            "program": "example/boarding_page.dart"
+            "program": "lib/main.dart"
         }
     ]
 }

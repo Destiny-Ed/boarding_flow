@@ -17,3 +17,7 @@
 ## [0.0.5]
 
 - Stable Version
+
+## [1.0.0]
+
+- Increase Skip Icon

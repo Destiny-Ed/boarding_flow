@@ -29,19 +29,16 @@ class _CustomBordingPageState1 extends State<CustomBordingPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          GestureDetector(
-            onTap: widget.lastPageAction,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Skip",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: widget.indicatorCurrentColor,
-                ),
+          IconButton(
+            icon: Text(
+              "Skip",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: widget.indicatorCurrentColor,
               ),
             ),
-          ),
+            onPressed: widget.lastPageAction,
+          )
         ],
       ),
       body: Container(
