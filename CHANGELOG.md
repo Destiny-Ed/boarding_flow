@@ -21,3 +21,7 @@
 ## [1.0.0]
 
 - Increase Skip Icon
+
+## [1.0.2]
+
+- Migrated to null safety

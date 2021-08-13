@@ -5,15 +5,14 @@ import 'package:flutter/material.dart';
 
 class CustomBordingPage extends StatefulWidget {
   final List<Pages> boardingPages;
-  final Function lastPageAction;
+  final Function? lastPageAction;
   final Color indicatorColor;
   final Color indicatorCurrentColor;
   CustomBordingPage(
-      {this.boardingPages,
+      {required this.boardingPages,
       this.lastPageAction,
       this.indicatorColor = Colors.black,
-      this.indicatorCurrentColor = Colors.purple})
-      : assert(boardingPages != null);
+      this.indicatorCurrentColor = Colors.purple});
   @override
   _CustomBordingPageState1 createState() => _CustomBordingPageState1();
 }
@@ -37,7 +36,7 @@ class _CustomBordingPageState1 extends State<CustomBordingPage> {
                 color: widget.indicatorCurrentColor,
               ),
             ),
-            onPressed: widget.lastPageAction,
+            onPressed: widget.lastPageAction as void Function()?,
           )
         ],
       ),
@@ -80,7 +79,7 @@ class _CustomBordingPageState1 extends State<CustomBordingPage> {
 
               currentIndex + 1 == widget.boardingPages.length
                   ? GestureDetector(
-                      onTap: widget.lastPageAction,
+                      onTap: widget.lastPageAction as void Function()?,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: CircleAvatar(
